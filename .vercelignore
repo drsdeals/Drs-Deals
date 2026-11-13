@@ -1,5 +1,5 @@
 .next/cache
 node_modules
-videos
-logos-new
+/videos/
+/logos-new/
 .git

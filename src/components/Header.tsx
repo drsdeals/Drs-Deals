@@ -74,12 +74,12 @@ export default function Header() {
                     {/* ── ZONE 1: Logo ── */}
                     <Link href="/" className="lux-logo-zone" aria-label="DRS Deals: Homepage">
                         <img
-                            src="/images/logo-festive-3d-clean.webp"
-                            alt="DRS Deals 3D Luxury Gold Logo"
-                            width={140}
+                            src={siteConfig.logo}
+                            alt="DRS Deals Luxury Hospitality Logo"
+                            width={240}
                             height={76}
                             decoding="async"
-                            className="lux-logo-img festive-3d-logo"
+                            className="lux-logo-img"
                         />
                     </Link>
 
