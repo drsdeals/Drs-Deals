@@ -1,0 +1,1095 @@
+import HomeTopVideo from '@/components/HomeTopVideo';
+import CorporateTrainShowcase from '@/components/CorporateTrainShowcase';
+import PartnerLogoSphere from '@/components/PartnerLogoSphere';
+import React from 'react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import ReelsShowcase from '@/components/ReelsShowcase';
+import ReviewsMarquee from '@/components/ReviewsMarquee';
+import NewsletterForm from '@/components/NewsletterForm';
+import CubeSteps from '@/components/CubeSteps';
+import HoneycombFeatures from '@/components/HoneycombFeatures';
+import ShowcaseIframe from '@/components/ShowcaseIframe';
+import { siteConfig } from '@/config/site';
+
+export const metadata: Metadata = {
+    title: 'DRS Deals | Premium Leisure, Dining & Resort Experiences in Delhi NCR and More',
+    description: 'Since 2003, DRS Deals has curated luxury resorts, fine dining, spa retreats, and water park passes in Delhi NCR and More at exclusive member rates.',
+    alternates: {
+        canonical: 'https://www.drsdeals.in/',
+    },
+    openGraph: {
+        images: [siteConfig.socialImage],
+    },
+};
+
+export default function Home() {
+    return (
+        <main>
+            {/* SECTION 1: CINEMATIC LOOPING EXPERIENCE VIDEO */}
+            <HomeTopVideo />
+
+            {/* SECTION 2: HERO SECTION */}
+            <section id="hero-section" className="hero">
+                {/* DESKTOP HERO (Laptops, Desktops & Large Screens >= 1024px) */}
+                <div className="hero-desktop-wrapper">
+                    <div className="hero-content">
+                        <div className="hero-eyebrow">PREMIUM LEISURE PRIVILEGES &amp; BRAND PARTNERSHIPS</div>
+                        <h1 className="hero-title">
+                            More Experiences. <br />
+                            More Memories. <br />
+                            <span className="text-gold">For Less.</span>
+                        </h1>
+                        <p className="hero-desc text-body-large">
+                            Connecting 2M+ guests with 1,000+ luxury resorts, fine dining, spa retreats &amp; leisure destinations in Delhi NCR and More.
+                        </p>
+                        <div className="hero-actions">
+                            <Link href="/deals" className="btn btn-primary">
+                                Explore Experiences 
+                                <svg className="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </Link>
+                            <Link href="/partners" className="btn btn-outline" style={{ background: 'rgba(255,255,255,0.85)' }}>
+                                Partner With DRS Deals
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </Link>
+                        </div>
+
+                        <div className="hero-trust-grid">
+                            <div className="trust-item">
+                                <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21.5 12H16c-.7 2-2 3-4 3s-3.3-1-4-3H2.5"/><path d="M5.5 5.1L2 12v6c0 1.1.9 2 2 2h16a2 2 0 002-2v-6l-3.5-6.9A2 2 0 0016.7 4H7.3a2 2 0 00-1.8 1.1z"/></svg>
+                                <span className="trust-label">240+<br />Curated Offers</span>
+                            </div>
+                            <div className="trust-item">
+                                <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                <span className="trust-label">1,000+<br />Partners</span>
+                            </div>
+                            <div className="trust-item">
+                                <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <span className="trust-label">4.9 ★<br />Member Rating</span>
+                            </div>
+                            <div className="trust-item">
+                                <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                                <span className="trust-label">Direct<br />Concierge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* MOBILE HERO (Phones & Tablets < 1024px) */}
+                <div className="hero-mobile-wrapper">
+                    <div className="hero-mobile-stage">
+                        <div className="hero-mobile-text">
+                            <div className="hero-eyebrow">PREMIUM LEISURE PRIVILEGES &amp; BRAND PARTNERSHIPS</div>
+                            <h1 className="hero-title">
+                                More Experiences. <br />
+                                More Memories. <br />
+                                <span className="text-gold">For Less.</span>
+                            </h1>
+                            <p className="hero-desc text-body-large">
+                                Connecting 2M+ <br />
+                                guests with 1,000+ <br />
+                                luxury resorts,<br />
+                                fine dining, <br />
+                                spa retreats &amp; <br />
+                                leisure destinations <br />
+                                in Delhi NCR and More.<br />
+                            </p>
+                            <div className="hero-actions">
+                                <Link href="/deals" className="btn btn-primary">
+                                    Explore Experiences 
+                                    <svg className="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </Link>
+                                <Link href="/partners" className="btn btn-outline" style={{ background: 'rgba(255,255,255,0.85)' }}>
+                                    Partner With DRS Deals
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="hero-mobile-trust-marquee" role="region" aria-label="DRS Deals Core Privileges">
+                        <div className="hero-mobile-trust-track">
+                            {/* Set 1 */}
+                            <div className="mobile-trust-card">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">TRUSTED PARTNERS</div>
+                                        <div className="mobile-trust-sub">Curated luxury with 5-star hotel &amp; resort partners</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            <div className="mobile-trust-card">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">WIDE DESTINATIONS</div>
+                                        <div className="mobile-trust-sub">Top verified spots in Delhi NCR and More</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            <div className="mobile-trust-card">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">MORE VALUE</div>
+                                        <div className="mobile-trust-sub">Save more on every stay, dinner &amp; holiday pass</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            <div className="mobile-trust-card">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">PRIVILEGE HELP</div>
+                                        <div className="mobile-trust-sub">24/7 dedicated concierge assistance</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            {/* Set 2 (Duplicate for infinite seamless loop) */}
+                            <div className="mobile-trust-card" aria-hidden="true">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">TRUSTED PARTNERS</div>
+                                        <div className="mobile-trust-sub">Curated luxury with 5-star hotel &amp; resort partners</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            <div className="mobile-trust-card" aria-hidden="true">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">WIDE DESTINATIONS</div>
+                                        <div className="mobile-trust-sub">Top verified spots in Delhi NCR and More</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            <div className="mobile-trust-card" aria-hidden="true">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">MORE VALUE</div>
+                                        <div className="mobile-trust-sub">Save more on every stay, dinner &amp; holiday pass</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+
+                            <div className="mobile-trust-card" aria-hidden="true">
+                                <div className="mobile-trust-left">
+                                    <div className="mobile-trust-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                                    </div>
+                                    <div>
+                                        <div className="mobile-trust-title">PRIVILEGE HELP</div>
+                                        <div className="mobile-trust-sub">24/7 dedicated concierge assistance</div>
+                                    </div>
+                                </div>
+                                <div className="mobile-trust-arrow">&rsaquo;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 3D BRAND COLLABORATIONS LOGO SPHERE */}
+            <PartnerLogoSphere />
+
+            {/* FEATURED EXPERIENCES */}
+            <section className="section-padding bg-ivory">
+                <div className="container">
+                    <div className="section-header">
+                        <div>
+                            <div className="hero-eyebrow" style={{ marginBottom: '8px' }}>CURATED MEMBERSHIPS</div>
+                            <h2 className="section-title">Featured Experiences</h2>
+                        </div>
+                        <Link href="/deals" className="link-arrow">View All Deals <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
+                    </div>
+                    
+                    <div className="deal-grid">
+                        {/* 1st: Wyndham */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/wyndham.webp" 
+                                    alt="Wyndham Garden Sonipat Murthal Five Star Membership" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">5-STAR VIP</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Sonipat Murthal</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Wyndham Garden Hotel Membership</h3>
+                                <div className="deal-partner">Wyndham Garden</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">₹50,000</div>
+                                    <div className="price-deal">₹10,000</div>
+                                </div>
+                                <Link href="/deals/wyndham-garden-sonipat-murthal" aria-label="Enquire Details for Wyndham Garden Hotel Membership" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+                        
+                        {/* 2nd: Oren */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/oren.webp" 
+                                    alt="Oren Kasauli Membership Card" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">2 NIGHTS FREE</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Kasauli</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Oren Kasauli Membership Card</h3>
+                                <div className="deal-partner">Oren Kasauli</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">₹50,000</div>
+                                    <div className="price-deal">₹10,000</div>
+                                </div>
+                                <Link href="/deals/oren-kasauli-membership" aria-label="Enquire Details for Oren Kasauli Membership Card" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+
+                        {/* 3rd: SK Premium */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/sk-premium.webp" 
+                                    alt="Hotel SK Premium Membership Ghaziabad" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">COMPLIMENTARY NIGHT</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Ghaziabad</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Hotel SK Premium Membership</h3>
+                                <div className="deal-partner">Hotel SK Premium</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">₹40,000</div>
+                                    <div className="price-deal">₹5,000</div>
+                                </div>
+                                <Link href="/deals/hotel-sk-premium-ghaziabad" aria-label="Enquire Details for Hotel SK Premium Membership" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+
+                        {/* 4th: Haut Monde */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/haut-monde.webp" 
+                                    alt="Haut Monde Neemrana Membership Card" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">3 NIGHTS FREE</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Neemrana</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Haut Monde Neemrana Membership</h3>
+                                <div className="deal-partner">Haut Monde</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">₹50,000</div>
+                                    <div className="price-deal">₹10,000</div>
+                                </div>
+                                <Link href="/deals/haut-monde-neemrana" aria-label="Enquire Details for Haut Monde Neemrana Membership" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+
+                        {/* 5th: Atma Yog */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/atma-yog.webp" 
+                                    alt="Atma Yog Luxury Manor Manali" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">3 NIGHTS FREE</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Manali</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Atma Yog Luxury Manor</h3>
+                                <div className="deal-partner">Atma Yog Manor</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">₹50,000</div>
+                                    <div className="price-deal">₹9,000</div>
+                                </div>
+                                <Link href="/deals/atmayog-luxury-manor-manali" aria-label="Enquire Details for Atma Yog Luxury Manor" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+
+                        {/* 6th: Rangmanch */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/rangmanch.webp" 
+                                    alt="Rangmanch Farms Day Outing" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">80+ ACTIVITIES</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Gurgaon</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Rangmanch Farms Day Outing</h3>
+                                <div className="deal-partner">Rangmanch Farms</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">Park Rate: ₹1,499</div>
+                                    <div className="price-deal">Contact for offers</div>
+                                </div>
+                                <Link href="/deals/rangmanch-farms-gurgaon" aria-label="Enquire Details for Rangmanch Farms Day Outing" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+
+                        {/* 7th: Madhavgarh */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/madhavgarh.webp" 
+                                    alt="Madhavgarh Farms Village Experience" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">UNLIMITED FOOD</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Gurgaon</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Madhavgarh Farms Village Ticket</h3>
+                                <div className="deal-partner">Madhavgarh Farms</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">Village Pass</div>
+                                    <div className="price-deal">₹749</div>
+                                </div>
+                                <Link href="/deals/madhavgarh-farms-gurgaon" aria-label="Enquire Details for Madhavgarh Farms Village Ticket" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+
+                        {/* 8th: Mera Gaon Mera Desh */}
+                        <div className="deal-card">
+                            <div className="deal-img-wrapper">
+                                <img 
+                                    src="/images/hotels/mera-gaon.webp" 
+                                    alt="Mera Gaon Mera Desh Village Experience" 
+                                    width={400} 
+                                    height={400} 
+                                    loading="lazy" 
+                                />
+                                <div className="deal-badge">WATER PARK INCLUDED</div>
+                            </div>
+                            <div className="deal-content">
+                                <div className="deal-meta">
+                                    <span className="deal-location">Murthal</span>
+                                    <span className="deal-rating">★ 4.9 Verified</span>
+                                </div>
+                                <h3 className="deal-title">Mera Gaon Mera Desh Pass</h3>
+                                <div className="deal-partner">Mera Gaon Mera Desh</div>
+                                <div className="deal-price-row">
+                                    <div className="price-original">Day Outing</div>
+                                    <div className="price-deal">₹800</div>
+                                </div>
+                                <Link href="/deals/mera-gaon-mera-desh-murthal" aria-label="Enquire Details for Mera Gaon Mera Desh Pass" className="btn btn-outline" style={{ width: '100%', marginTop: '16px' }}>Enquire Details</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SHOWCASE SECTION */}
+            <ShowcaseIframe />
+
+            {/* HOW DRS DEALS WORKS */}
+            <section className="section-padding bg-white">
+                <div className="container">
+                    <div className="section-header text-center justify-center">
+                        <h2 className="section-title" style={{ marginBottom: '8px' }}>How It Works</h2>
+                        <p className="text-body-large">A seamless 4-step concierge journey to your next luxury escape.</p>
+                    </div>
+                    
+                    <CubeSteps />
+                </div>
+            </section>
+
+            {/* WHY DRS DEALS EXISTS */}
+            <section className="section-padding bg-ivory">
+                <div className="container">
+                    <div className="story-grid">
+                        <div className="story-content">
+                            <div className="hero-eyebrow" style={{ marginBottom: '12px' }}>OUR 23-YEAR HERITAGE</div>
+                            <h2 className="section-title" style={{ marginBottom: '24px' }}>Why DRS Deals Exists</h2>
+                            <p className="text-body-large" style={{ marginBottom: '24px' }}>
+                                Founded in 2003, DRS Deals has spent over two decades pioneering premium hospitality memberships in Delhi NCR and More, connecting more than 2 million happy guests with 1,000+ luxury partner venues.
+                            </p>
+                            <p className="text-body-small text-charcoal-light" style={{ marginBottom: '32px', lineHeight: 1.7 }}>
+                                We negotiate directly with 5-star hotels, luxury resorts, gourmet restaurants, and entertainment destinations in Delhi NCR and More, securing exclusive privileges while delivering over ₹1 Billion in savings to our discerning members.
+                            </p>
+                            <Link href="/about" className="btn btn-outline">Read Our 23-Year Story</Link>
+                        </div>
+                        <div className="story-visual">
+                            <img 
+                                src="/images/webp/why-drs-deals-exists.webp" 
+                                alt="Guests enjoying a premium vacation" 
+                                className="rounded-lg shadow-soft" 
+                                width={560} 
+                                height={400} 
+                                loading="lazy" 
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* INTERACTIVE 3D CORPORATE CLIENT TRAIN SHOWCASE */}
+            <CorporateTrainShowcase />
+
+            {/* TRUST GRID */}
+            <section className="section-padding bg-white">
+                <div className="container text-center">
+                    <h2 className="section-title" style={{ marginBottom: '48px' }}>Why Guests Choose DRS Deals</h2>
+                    <HoneycombFeatures />
+                </div>
+            </section>
+
+            {/* PARTNER SPOTLIGHT */}
+            <section className="section-padding bg-ivory">
+                <div className="container">
+                    <div className="text-eyebrow" style={{ marginBottom: '24px', textAlign: 'center' }}>Featured Destination Spotlight</div>
+                    <div className="spotlight-card rounded-lg shadow-soft">
+                        <img 
+                            src="/images/hotels/wyndham.webp" 
+                            alt="Wyndham Garden Sonipat Murthal" 
+                            className="spotlight-img" 
+                            width={1140} 
+                            height={450} 
+                            loading="lazy"
+                            style={{ objectPosition: 'center 60%' }}
+                        />
+                        <div className="spotlight-content bg-white">
+                            <h2 className="section-title" style={{ marginBottom: '16px' }}>Wyndham Garden Sonipat Murthal</h2>
+                            <p className="text-body-large" style={{ marginBottom: '24px' }}>Five Star Hotel & Resort</p>
+                            <p className="text-body-small text-charcoal-light" style={{ marginBottom: '32px', lineHeight: 1.7 }}>
+                                Enjoy exclusive member rates and privileges for luxury stays, gourmet dining, and leisure escapes at Wyndham Garden Sonipat Murthal, Haryana.
+                            </p>
+                            <div style={{ display: 'flex', gap: '16px' }}>
+                                <Link href="/deals/wyndham-garden-sonipat-murthal" className="btn btn-primary">View Details & Booking</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CATEGORIES & CITIES */}
+            <section className="section-padding bg-ivory">
+                <div className="container">
+                    <div className="section-header">
+                        <h2 className="section-title">Explore by Category</h2>
+                    </div>
+                    
+                    <div className="category-grid">
+                        <Link href="/category/hotel-resorts" className="category-card" aria-label="Explore Hotel & Resorts">
+                            <img 
+                                src="/images/webp/explore-category-resorts.webp" 
+                                alt="Hotel & Resorts" 
+                                width={360} 
+                                height={240} 
+                                loading="lazy" 
+                            />
+                            <div className="category-overlay">
+                                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-champagne-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px', display: 'block' }}>28+ Properties</span>
+                                <h3 className="category-title">Hotel &amp; Resorts</h3>
+                            </div>
+                        </Link>
+                        <Link href="/category/restaurants-bars" className="category-card" aria-label="Explore Restaurants & Bars">
+                            <img 
+                                src="/images/webp/explore-category-dining.webp" 
+                                alt="Restaurants & Bars" 
+                                width={360} 
+                                height={240} 
+                                loading="lazy" 
+                            />
+                            <div className="category-overlay">
+                                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-champagne-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px', display: 'block' }}>68+ Destinations</span>
+                                <h3 className="category-title">Restaurants &amp; Bars</h3>
+                            </div>
+                        </Link>
+                        <Link href="/category/theme-parks" className="category-card" aria-label="Explore Theme Parks & Farms">
+                            <img 
+                                src="/images/webp/explore-category-theme-parks.webp" 
+                                alt="Theme Parks" 
+                                width={360} 
+                                height={240} 
+                                loading="lazy" 
+                            />
+                            <div className="category-overlay">
+                                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-champagne-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px', display: 'block' }}>17+ Cultural Farms</span>
+                                <h3 className="category-title">Theme Parks</h3>
+                            </div>
+                        </Link>
+                        <Link href="/category/waterparks" className="category-card" aria-label="Explore Waterparks">
+                            <img 
+                                src="/images/webp/explore-category-waterparks.webp" 
+                                alt="Waterparks" 
+                                width={360} 
+                                height={240} 
+                                loading="lazy" 
+                            />
+                            <div className="category-overlay">
+                                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-champagne-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px', display: 'block' }}>14+ Splash Parks</span>
+                                <h3 className="category-title">Waterparks</h3>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* DRS DEALS INSTAGRAM REELS & LIVE MOMENTS */}
+            <ReelsShowcase />
+
+            {/* POPULAR SEARCHES & FEATURED COLLECTIONS */}
+            <section className="section-padding bg-white">
+                <div className="container">
+                    <div className="split-grid">
+                        <div>
+                            <h2 className="section-title" style={{ fontSize: '1.75rem', marginBottom: '24px' }}>Popular Searches</h2>
+                            <ul className="link-list">
+                                <li><Link href="/search?q=water+parks">Water parks near Delhi NCR</Link></li>
+                                <li><Link href="/search?q=weekend+resorts">Weekend luxury resorts</Link></li>
+                                <li><Link href="/search?q=luxury+spa">Luxury wellness spas</Link></li>
+                                <li><Link href="/search?q=dining">Fine dining chef tasting menus</Link></li>
+                                <li><Link href="/search?q=farmhouse">Farmhouse day retreats</Link></li>
+                                <li><Link href="/search?q=murthal">Sonipat Murthal hotel stays</Link></li>
+                                <li><Link href="/search?q=corporate">Corporate retreats &amp; events</Link></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 className="section-title" style={{ fontSize: '1.75rem', marginBottom: '24px' }}>Featured Collections</h2>
+                            <div className="collection-list">
+                                <Link href="/collections/weekend" className="collection-item">
+                                    <img 
+                                        src="/images/webp/featured-collections-weekend-escapes.webp" 
+                                        alt="Weekend Escapes" 
+                                        width={80} 
+                                        height={80} 
+                                        loading="lazy" 
+                                    />
+                                    <span>Weekend Escapes</span>
+                                </Link>
+                                <Link href="/collections/couples" className="collection-item">
+                                    <img 
+                                        src="/images/webp/featured-collections-romantic-getaways.webp" 
+                                        alt="Romantic Getaways" 
+                                        width={80} 
+                                        height={80} 
+                                        loading="lazy" 
+                                    />
+                                    <span>Romantic Getaways</span>
+                                </Link>
+                                <Link href="/collections/family" className="collection-item">
+                                    <img 
+                                        src="/images/webp/featured-collections-family-fun.webp" 
+                                        alt="Family Fun" 
+                                        width={80} 
+                                        height={80} 
+                                        loading="lazy" 
+                                    />
+                                    <span>Family Outings</span>
+                                </Link>
+                                <Link href="/collections/corporate" className="collection-item">
+                                    <img 
+                                        src="/images/webp/featured-collections-luxury-dining.webp" 
+                                        alt="Corporate Experiences" 
+                                        width={80} 
+                                        height={80} 
+                                        loading="lazy" 
+                                    />
+                                    <span>Corporate Experiences</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CUSTOMER & HOTELIER VERIFIED REVIEWS MARQUEE */}
+            <ReviewsMarquee />
+
+            {/* SECTION 10A: WHAT DRS DEALS DOES FOR HOSPITALITY BRANDS */}
+            <section className="section-padding bg-white border-top">
+                <div className="container">
+                    <div className="story-grid" style={{ marginBottom: '48px', alignItems: 'center' }}>
+                        <div className="story-content">
+                            <div className="hero-eyebrow" style={{ marginBottom: '12px', color: 'var(--color-champagne-gold)' }}>
+                                FOR HOSPITALITY &amp; EXPERIENCE BRANDS
+                            </div>
+                            <h2 className="section-title" style={{ marginBottom: '20px' }}>
+                                We Provide Services At <span className="text-gold">No Upfront Cost</span>
+                            </h2>
+                            <p className="text-body-large text-charcoal-light" style={{ marginBottom: '24px', lineHeight: 1.7 }}>
+                                Strengthening sales, marketing, and customer engagement for leading hotels, resorts, restaurants, and entertainment destinations.
+                            </p>
+                        </div>
+                        <div className="story-visual">
+                            <img 
+                                src="/images/b2b/b2b_hospitality_showcase.webp" 
+                                alt="Luxury hotel resort exterior" 
+                                className="rounded-lg shadow-soft" 
+                                width={560} 
+                                height={350} 
+                                loading="lazy" 
+                            />
+                        </div>
+                    </div>
+
+                    <div className="b2b-impact-grid">
+                        <div className="b2b-impact-card" style={{ background: 'var(--color-ivory)', padding: '32px', borderRadius: '12px', border: '1px solid rgba(188, 144, 68, 0.2)' }}>
+                            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-charcoal)', marginBottom: '8px' }}>Acquire New Customers</div>
+                            <p className="text-body-small text-charcoal-light">Introduce your venue to thousands of active high-intent local guests and travelers without upfront ad spend.</p>
+                        </div>
+                        <div className="b2b-impact-card" style={{ background: 'var(--color-ivory)', padding: '32px', borderRadius: '12px', border: '1px solid rgba(188, 144, 68, 0.2)' }}>
+                            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-charcoal)', marginBottom: '8px' }}>Increase Profitability</div>
+                            <p className="text-body-small text-charcoal-light">Fill unutilized room inventory, off-peak dining tables, and weekday activity slots to boost overall margin.</p>
+                        </div>
+                        <div className="b2b-impact-card" style={{ background: 'var(--color-ivory)', padding: '32px', borderRadius: '12px', border: '1px solid rgba(188, 144, 68, 0.2)' }}>
+                            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-charcoal)', marginBottom: '8px' }}>Achieve Sales Targets</div>
+                            <p className="text-body-small text-charcoal-light">Drive guaranteed sales volumes through structured membership voucher releases and customized promo privileges.</p>
+                        </div>
+                        <div className="b2b-impact-card" style={{ background: 'var(--color-ivory)', padding: '32px', borderRadius: '12px', border: '1px solid rgba(188, 144, 68, 0.2)' }}>
+                            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-charcoal)', marginBottom: '8px' }}>Drive New Footfall</div>
+                            <p className="text-body-small text-charcoal-light">Turn first-time visitors into repeat patrons through high-value dining and resort experience incentives.</p>
+                        </div>
+                        <div className="b2b-impact-card" style={{ background: 'var(--color-ivory)', padding: '32px', borderRadius: '12px', border: '1px solid rgba(188, 144, 68, 0.2)' }}>
+                            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-charcoal)', marginBottom: '8px' }}>Retain Existing Guests</div>
+                            <p className="text-body-small text-charcoal-light">Strengthen guest loyalty with dedicated privilege passes and direct concierge-backed repeat booking support.</p>
+                        </div>
+                        <div className="b2b-impact-card" style={{ background: 'var(--color-ivory)', padding: '32px', borderRadius: '12px', border: '1px solid rgba(188, 144, 68, 0.2)' }}>
+                            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-charcoal)', marginBottom: '8px' }}>Digital Marketing &amp; Re-engagement</div>
+                            <p className="text-body-small text-charcoal-light">Benefit from 30M+ social reel views and direct campaign outreach to win back past or dissatisfied guests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 11: VENUE PARTNERSHIPS */}
+            <section className="section-padding bg-ivory text-charcoal">
+                <div className="container">
+                    <div className="story-grid" style={{ marginBottom: '40px', alignItems: 'center' }}>
+                        <div className="story-visual">
+                            <picture>
+                                <source srcSet="/images/b2b/venue_partnership_banner.webp" type="image/webp" />
+                                <img 
+                                    src="/images/b2b/venue_partnership_banner.webp" 
+                                    alt="Executive hospitality partnership meeting" 
+                                    className="rounded-lg shadow-soft" 
+                                    width={560} 
+                                    height={350} 
+                                    loading="lazy" 
+                                />
+                            </picture>
+                        </div>
+                        <div className="story-content">
+                            <div className="hero-eyebrow" style={{ marginBottom: '12px', color: 'var(--color-champagne-gold)' }}>
+                                STRATEGIC VENUE COLLABORATION
+                            </div>
+                            <h2 className="section-title text-charcoal" style={{ marginBottom: '20px' }}>
+                                Join 1,000+ Leading Hotels, Resorts &amp; Dining Brands
+                            </h2>
+                            <p className="text-body-large text-charcoal-light" style={{ marginBottom: '24px', lineHeight: 1.7 }}>
+                                We design customized sales programs that drive direct footfall, cross-department revenue, and long-term customer relationships for luxury hospitality properties in Delhi NCR and More.
+                            </p>
+                            <Link href="/partners" className="btn btn-primary">Discuss a Partnership Program</Link>
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
+                        <div style={{ background: '#fff', padding: '24px', borderRadius: '8px', borderLeft: '4px solid var(--color-champagne-gold)' }}>
+                            <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '6px' }}>Acquire New Customers</strong>
+                            <span style={{ fontSize: '0.9rem', color: '#4A4A4A' }}>Reach high-spending leisure travelers and local corporate members.</span>
+                        </div>
+                        <div style={{ background: '#fff', padding: '24px', borderRadius: '8px', borderLeft: '4px solid var(--color-champagne-gold)' }}>
+                            <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '6px' }}>Increase Utilization</strong>
+                            <span style={{ fontSize: '0.9rem', color: '#4A4A4A' }}>Fill slow weekday slots, banquets, spa sessions, and quiet seasonal periods.</span>
+                        </div>
+                        <div style={{ background: '#fff', padding: '24px', borderRadius: '8px', borderLeft: '4px solid var(--color-champagne-gold)' }}>
+                            <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '6px' }}>Build Relationships</strong>
+                            <span style={{ fontSize: '0.9rem', color: '#4A4A4A' }}>Convert voucher users into lifetime repeat guests through exceptional service.</span>
+                        </div>
+                        <div style={{ background: '#fff', padding: '24px', borderRadius: '8px', borderLeft: '4px solid var(--color-champagne-gold)' }}>
+                            <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '6px' }}>Cross-Department Growth</strong>
+                            <span style={{ fontSize: '0.9rem', color: '#4A4A4A' }}>Drive room guests to dining outlets, bars, spa, and leisure facilities.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 11A: HOW OUR PARTNERSHIP PROGRAM WORKS */}
+            <section className="section-padding bg-white">
+                <div className="container">
+                    <div className="story-grid" style={{ marginBottom: '40px', alignItems: 'center' }}>
+                        <div className="story-content">
+                            <div className="hero-eyebrow" style={{ marginBottom: '12px', color: 'var(--color-champagne-gold)' }}>
+                                WORKFLOW &amp; EXECUTION
+                            </div>
+                            <h2 className="section-title">How Our Partnership Program Works</h2>
+                            <p className="text-body-large text-charcoal-light" style={{ marginTop: '12px', lineHeight: 1.7 }}>
+                                An end-to-end managed execution model built on trust, transparency, and zero upfront financial risk.
+                            </p>
+                        </div>
+                        <div className="story-visual">
+                            <picture>
+                                <source srcSet="/images/b2b/workflow_concierge_execution.webp" type="image/webp" />
+                                <img 
+                                    src="/images/b2b/workflow_concierge_execution.webp" 
+                                    alt="Hotel concierge guest service" 
+                                    className="rounded-lg shadow-soft" 
+                                    width={560} 
+                                    height={350} 
+                                    loading="lazy" 
+                                />
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div className="workflow-steps-grid">
+                        <div style={{ padding: '24px', background: 'var(--color-ivory)', borderRadius: '8px' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-champagne-gold)', letterSpacing: '0.1em' }}>STEP 1</span>
+                            <h3 style={{ fontSize: '1.15rem', marginTop: '8px', marginBottom: '8px' }}>Initial Consultation &amp; Needs Assessment</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)' }}>We evaluate property objectives, occupancy gaps, dining capacity, and revenue targets.</p>
+                        </div>
+                        <div style={{ padding: '24px', background: 'var(--color-ivory)', borderRadius: '8px' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-champagne-gold)', letterSpacing: '0.1em' }}>STEP 2</span>
+                            <h3 style={{ fontSize: '1.15rem', marginTop: '8px', marginBottom: '8px' }}>Program Design &amp; Authorization</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)' }}>Co-design tailored membership structures, validity periods, and custom privilege vouchers.</p>
+                        </div>
+                        <div style={{ padding: '24px', background: 'var(--color-ivory)', borderRadius: '8px' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-champagne-gold)', letterSpacing: '0.1em' }}>STEP 3</span>
+                            <h3 style={{ fontSize: '1.15rem', marginTop: '8px', marginBottom: '8px' }}>Collateral &amp; Content Creation</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)' }}>Develop high-quality physical &amp; digital marketing materials, videos, and reel features.</p>
+                        </div>
+                        <div style={{ padding: '24px', background: 'var(--color-ivory)', borderRadius: '8px' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-champagne-gold)', letterSpacing: '0.1em' }}>STEP 4</span>
+                            <h3 style={{ fontSize: '1.15rem', marginTop: '8px', marginBottom: '8px' }}>Direct Sales &amp; Digital Outreach</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)' }}>Deploy trained sales executives, corporate channels, and targeted digital promotion campaigns.</p>
+                        </div>
+                        <div style={{ padding: '24px', background: 'var(--color-ivory)', borderRadius: '8px' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-champagne-gold)', letterSpacing: '0.1em' }}>STEP 5</span>
+                            <h3 style={{ fontSize: '1.15rem', marginTop: '8px', marginBottom: '8px' }}>Customer Acquisition &amp; Concierge</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)' }}>Manage guest onboarding, phone/WhatsApp inquiries, reservation bookings, and support.</p>
+                        </div>
+                        <div style={{ padding: '24px', background: 'var(--color-ivory)', borderRadius: '8px' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-champagne-gold)', letterSpacing: '0.1em' }}>STEP 6</span>
+                            <h3 style={{ fontSize: '1.15rem', marginTop: '8px', marginBottom: '8px' }}>Settlement &amp; Program Review</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)' }}>Provide transparent redemptions reporting, revenue tracking, and ongoing program optimization.</p>
+                        </div>
+                    </div>
+
+                    <div style={{ background: 'var(--color-ivory)', padding: '24px 32px', borderRadius: '12px', border: '1px dashed var(--color-champagne-gold)', marginTop: '32px', textAlign: 'center' }}>
+                        <span style={{ fontWeight: 600, color: 'var(--color-charcoal)', fontSize: '1.05rem' }}>
+                            🛡️ No Upfront Financial Investment Required: We bear marketing and distribution costs under performance-based agreements.
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 12: VERIFIED STATS MARQUEES */}
+            <section className="section-padding bg-ivory" style={{ overflow: 'hidden' }}>
+                <div className="container" style={{ marginBottom: '36px' }}>
+                    <div className="section-header text-center justify-center" style={{ marginBottom: '0' }}>
+                        <div className="hero-eyebrow" style={{ marginBottom: '8px' }}>PROVEN TRACK RECORD</div>
+                        <h2 className="section-title">Verified Brand &amp; Heritage Statistics</h2>
+                    </div>
+                </div>
+
+                {/* ROW 1: Moves Left to Right */}
+                <div className="stats-marquee-container" role="region" aria-label="Brand heritage row 1" style={{ marginBottom: '24px' }}>
+                    <div className="stats-marquee-track-ltr">
+                        {/* Set 1 */}
+                        <div className="stat-card">
+                            <div className="stat-number">23 Years</div>
+                            <div className="stat-label">Hospitality Legacy</div>
+                            <div className="stat-desc">Curating luxury experiences since 2003.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">11+ Years</div>
+                            <div className="stat-label">Industry Leadership</div>
+                            <div className="stat-desc">Specialized sales execution model.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">200+</div>
+                            <div className="stat-label">Brand Tie-Ups</div>
+                            <div className="stat-desc">Trusted by leading national hospitality chains.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">1,000+</div>
+                            <div className="stat-label">Venue Partners</div>
+                            <div className="stat-desc">Hotels, resorts, spas &amp; leisure spots.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">2M+</div>
+                            <div className="stat-label">Happy Guests</div>
+                            <div className="stat-desc">Discerning members served nationwide.</div>
+                        </div>
+
+                        {/* Set 2 (Duplicate for infinite seamless loop) */}
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">23 Years</div>
+                            <div className="stat-label">Hospitality Legacy</div>
+                            <div className="stat-desc">Curating luxury experiences since 2003.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">11+ Years</div>
+                            <div className="stat-label">Industry Leadership</div>
+                            <div className="stat-desc">Specialized sales execution model.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">200+</div>
+                            <div className="stat-label">Brand Tie-Ups</div>
+                            <div className="stat-desc">Trusted by leading national hospitality chains.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">1,000+</div>
+                            <div className="stat-label">Venue Partners</div>
+                            <div className="stat-desc">Hotels, resorts, spas &amp; leisure spots.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">2M+</div>
+                            <div className="stat-label">Happy Guests</div>
+                            <div className="stat-desc">Discerning members served nationwide.</div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ROW 2: Moves Right to Left */}
+                <div className="stats-marquee-container" role="region" aria-label="Brand heritage row 2">
+                    <div className="stats-marquee-track-rtl">
+                        {/* Set 1 */}
+                        <div className="stat-card">
+                            <div className="stat-number">30M+</div>
+                            <div className="stat-label">Social Reel Views</div>
+                            <div className="stat-desc">Massive organic digital footprint.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">Top Hubs</div>
+                            <div className="stat-label">Key Destinations</div>
+                            <div className="stat-desc">Delhi NCR and More.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">₹1B+</div>
+                            <div className="stat-label">Value Delivered</div>
+                            <div className="stat-desc">Member savings &amp; partner revenue.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">MSME</div>
+                            <div className="stat-label">Certified</div>
+                            <div className="stat-desc">Government recognized enterprise.</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">DRS DEALS®</div>
+                            <div className="stat-label">Registered Trademark</div>
+                            <div className="stat-desc">Official Govt registered brand.</div>
+                        </div>
+
+                        {/* Set 2 (Duplicate for infinite seamless loop) */}
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">30M+</div>
+                            <div className="stat-label">Social Reel Views</div>
+                            <div className="stat-desc">Massive organic digital footprint.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">Top Hubs</div>
+                            <div className="stat-label">Key Destinations</div>
+                            <div className="stat-desc">Delhi NCR and More.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">₹1B+</div>
+                            <div className="stat-label">Value Delivered</div>
+                            <div className="stat-desc">Member savings &amp; partner revenue.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">MSME</div>
+                            <div className="stat-label">Certified</div>
+                            <div className="stat-desc">Government recognized enterprise.</div>
+                        </div>
+                        <div className="stat-card" aria-hidden="true">
+                            <div className="stat-number">DRS DEALS®</div>
+                            <div className="stat-label">Registered Trademark</div>
+                            <div className="stat-desc">Official Govt registered brand.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* GUIDES */}
+            <section className="section-padding bg-ivory">
+                <div className="container">
+                    <div className="section-header text-center justify-center">
+                        <h2 className="section-title">The Curated Guide</h2>
+                    </div>
+                    <div className="guides-grid">
+                        <div className="guide-card">
+                            <div className="guide-visual">
+                                <img 
+                                    src="/images/webp/the-curated-guide-1.webp" 
+                                    alt="Resort guide" 
+                                    width={320} 
+                                    height={200} 
+                                    loading="lazy" 
+                                />
+                            </div>
+                            <div className="guide-content">
+                                <h3 className="guide-title">Top 10 Resorts Near Delhi NCR for a Quick Escape</h3>
+                                <p className="guide-desc text-body-small text-charcoal-light">Our editors review popular weekend resort properties within a 4-hour drive.</p>
+                                <Link href="/guides/top-10-resorts" aria-label="Read Guide: Top 10 Resorts Near Delhi NCR for a Quick Escape" className="btn btn-outline" style={{ marginTop: '16px', width: '100%' }}>Read Guide</Link>
+                            </div>
+                        </div>
+                        <div className="guide-card">
+                            <div className="guide-visual">
+                                <img 
+                                    src="/images/webp/the-curated-guide-2.webp" 
+                                    alt="Fine dining guide" 
+                                    width={320} 
+                                    height={200} 
+                                    loading="lazy" 
+                                />
+                            </div>
+                            <div className="guide-content">
+                                <h3 className="guide-title">The Fine Dining Etiquette &amp; Value Maximiser</h3>
+                                <p className="guide-desc text-body-small text-charcoal-light">How to make the most of 5-star hotel dining passes and chef tasting menus.</p>
+                                <Link href="/guides/fine-dining" aria-label="Read Guide: The Fine Dining Etiquette and Value Maximiser" className="btn btn-outline" style={{ marginTop: '16px', width: '100%' }}>Read Guide</Link>
+                            </div>
+                        </div>
+                        <div className="guide-card">
+                            <div className="guide-visual">
+                                <img 
+                                    src="/images/webp/the-curated-guide-3.webp" 
+                                    alt="Water park guide" 
+                                    width={320} 
+                                    height={200} 
+                                    loading="lazy" 
+                                />
+                            </div>
+                            <div className="guide-content">
+                                <h3 className="guide-title">Water Parks vs Theme Parks: Ultimate Family Outing</h3>
+                                <p className="guide-desc text-body-small text-charcoal-light">Helpful tips before booking your family weekend passes and water park visits.</p>
+                                <Link href="/guides/family-parks" aria-label="Read Guide: Water Parks vs Theme Parks Ultimate Family Outing" className="btn btn-outline" style={{ marginTop: '16px', width: '100%' }}>Read Guide</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* NEWSLETTER */}
+            <section className="section-padding bg-white">
+                <div className="container">
+                    <div className="newsletter-card rounded-lg bg-ivory">
+                        <div className="newsletter-content">
+                            <div className="hero-eyebrow" style={{ marginBottom: '8px' }}>PRIVATE ACCESS</div>
+                            <h2 className="section-title" style={{ marginBottom: '12px' }}>Join the Privileged Circle</h2>
+                            <p className="text-body-large text-charcoal-light" style={{ marginBottom: '24px' }}>Get curated updates on new resort memberships, venue spotlights, and seasonal privileges.</p>
+                            <NewsletterForm />
+                        </div>
+                        <div className="newsletter-visual">
+                            <img 
+                                src="/images/webp/newsletter-app-promo.webp" 
+                                alt="DRS Deals preview" 
+                                className="rounded-lg shadow-soft" 
+                                width={450} 
+                                height={320} 
+                                loading="lazy" 
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* SECTION 15: FINAL DUAL CTA (GUESTS vs HOSPITALITY BRANDS) */}
+            <section className="section-padding bg-ivory border-top">
+                <div className="container">
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
+                        {/* Guest CTA Card */}
+                        <div style={{ background: '#fff', padding: '40px', borderRadius: '16px', boxShadow: 'var(--shadow-soft)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                            <div className="hero-eyebrow" style={{ marginBottom: '8px', color: 'var(--color-champagne-gold)' }}>FOR GUESTS &amp; MEMBERS</div>
+                            <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-serif)', marginBottom: '16px' }}>Ready to Experience More for Less?</h2>
+                            <p className="text-body-small text-charcoal-light" style={{ marginBottom: '24px', lineHeight: 1.7 }}>
+                                Explore 240+ verified member privileges across 5-star hotels, luxury resorts, dining, spa retreats, and family waterparks.
+                            </p>
+                            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                                <Link href="/deals" className="btn btn-primary">Browse All Deals</Link>
+                                <a href={siteConfig.getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-outline">WhatsApp Concierge</a>
+                            </div>
+                        </div>
+
+                        {/* Partner CTA Card */}
+                        <div style={{ background: 'var(--color-charcoal)', color: '#fff', padding: '40px', borderRadius: '16px', boxShadow: 'var(--shadow-hover)' }}>
+                            <div className="hero-eyebrow" style={{ marginBottom: '8px', color: '#D4A857' }}>FOR HOSPITALITY BRANDS</div>
+                            <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-serif)', color: '#fff', marginBottom: '16px' }}>Strengthen Sales &amp; Acquire New Guests</h2>
+                            <p className="text-body-small" style={{ color: 'rgba(255,255,255,0.82)', marginBottom: '24px', lineHeight: 1.7 }}>
+                                Partner with DRS Deals at no upfront cost. We bring structured sales execution, footfall, and digital promotion to your property.
+                            </p>
+                            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                                <Link href="/partners" className="btn btn-primary">Partner With Us</Link>
+                                <a href={`mailto:${siteConfig.contacts.partnerEmail}`} className="btn btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.4)' }}>Email Partnership Team</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}

@@ -1,0 +1,202 @@
+import type { Metadata, Viewport } from 'next';
+import { Inter, Playfair_Display } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import BottomRightActions from '@/components/BottomRightActions';
+import Chatbot from '@/components/Chatbot';
+import { siteConfig } from '@/config/site';
+
+const inter = Inter({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-inter',
+});
+
+const playfair = Playfair_Display({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-playfair',
+});
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    themeColor: '#080705',
+};
+
+export const metadata: Metadata = {
+    metadataBase: new URL(siteConfig.url),
+    title: {
+        default: 'DRS Deals | Premium Leisure, Dining & Resort Experiences in Delhi NCR and More',
+        template: '%s | DRS Deals',
+    },
+    description: 'Since 2003, DRS Deals has curated luxury resorts, fine dining, spa retreats, and water park passes in Delhi NCR and More at exclusive member rates.',
+    keywords: [
+        'DRS Deals',
+        'Luxury Resort Deals Delhi NCR',
+        'Fine Dining Vouchers Delhi NCR',
+        'Heritage Stay Discounts Delhi NCR',
+        'Spa Retreat Offers Delhi NCR',
+        'Water Park Passes Delhi NCR',
+        'Exclusive Travel Experiences',
+        'Curated Hospitality Memberships',
+        '23 Year Legacy Hospitality',
+    ],
+    authors: [{ name: siteConfig.founder.name, url: siteConfig.founder.url }],
+    creator: siteConfig.creator.name,
+    publisher: siteConfig.name,
+    alternates: {
+        canonical: `${siteConfig.url}/`,
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    openGraph: {
+        title: 'DRS Deals | Premium Experiences & Exclusive Offers Since 2003',
+        description: 'Curating luxury resorts, fine dining, spa retreats, and family experiences in Delhi NCR and More at exclusive member rates. 23-Year Hospitality Legacy.',
+        url: `${siteConfig.url}/`,
+        siteName: siteConfig.name,
+        images: [
+            {
+                url: siteConfig.socialImage,
+                width: 1200,
+                height: 630,
+                alt: 'DRS Deals Luxury Resort Experience',
+            },
+        ],
+        locale: 'en_IN',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'DRS Deals | Premium Experiences for Less Since 2003',
+        description: 'Discover luxury stays, gourmet dining, and spa retreats in Delhi NCR and More at exclusive member rates.',
+        images: [siteConfig.socialImage],
+    },
+    icons: {
+        icon: [
+            { url: '/favicon.ico', sizes: '32x32' },
+            { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+            { url: siteConfig.logo, type: 'image/webp' },
+        ],
+        apple: [
+            { url: '/icon.png', sizes: '180x180', type: 'image/png' },
+        ],
+    },
+};
+
+export default function RootLayout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    // E-E-A-T & Technical SEO Schema.org JSON-LD (Verified facts & ratings)
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Organization',
+                '@id': `${siteConfig.url}/#organization`,
+                name: siteConfig.name,
+                url: `${siteConfig.url}/`,
+                logo: `${siteConfig.url}${siteConfig.logo}`,
+                foundingDate: '2003',
+                founder: {
+                    '@type': 'Person',
+                    name: siteConfig.founder.name,
+                    url: siteConfig.founder.url,
+                },
+                sameAs: [
+                    'https://github.com/yashveer-singh-speaks/drs-deals',
+                ],
+                description: 'India’s premier curated platform for exclusive luxury hospitality, fine dining, spa wellness, and resort memberships since 2003.',
+                contactPoint: [
+                    {
+                        '@type': 'ContactPoint',
+                        telephone: siteConfig.contacts.hotline1,
+                        contactType: 'customer service',
+                        areaServed: 'IN',
+                        availableLanguage: ['en', 'hi'],
+                    },
+                ],
+            },
+            {
+                '@type': 'WebSite',
+                '@id': `${siteConfig.url}/#website`,
+                url: `${siteConfig.url}/`,
+                name: siteConfig.name,
+                publisher: {
+                    '@id': `${siteConfig.url}/#organization`,
+                },
+                potentialAction: {
+                    '@type': 'SearchAction',
+                    target: `${siteConfig.url}/search?q={search_term_string}`,
+                    'query-input': 'required name=search_term_string',
+                },
+            },
+            {
+                '@type': 'LocalBusiness',
+                '@id': `${siteConfig.url}/#localbusiness`,
+                name: siteConfig.name,
+                image: `${siteConfig.url}${siteConfig.logo}`,
+                url: `${siteConfig.url}/`,
+                priceRange: '₹749 - ₹25000',
+                telephone: siteConfig.contacts.hotline1,
+                address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'New Delhi',
+                    addressRegion: 'Delhi NCR',
+                    addressCountry: 'IN',
+                },
+                aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '4.9',
+                    bestRating: '5',
+                    worstRating: '1',
+                    ratingCount: '240',
+                },
+            },
+        ],
+    };
+
+    return (
+        <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+            <head>
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/images/mobile-bg-1.webp"
+                    media="(max-width: 767px)"
+                    fetchPriority="high"
+                />
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/images/background.webp"
+                    media="(min-width: 768px)"
+                    fetchPriority="high"
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            </head>
+            <body>
+                <Header />
+                {children}
+                <Footer />
+                <Chatbot />
+                <BottomRightActions />
+            </body>
+        </html>
+    );
+}
