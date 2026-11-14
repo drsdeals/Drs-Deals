@@ -40,7 +40,8 @@ export default function HomeTopVideo() {
                     loop
                     muted
                     playsInline
-                    preload="auto"
+                    preload="metadata"
+                    poster="/images/webp/luxury-resort-atmospheric.webp"
                     aria-label="DRS Deals Luxury Leisure and Resort Highlights"
                 >
                     <source src="/videos/d.mp4" type="video/mp4" />

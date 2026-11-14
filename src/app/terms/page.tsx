@@ -39,9 +39,19 @@ export default function TermsPage() {
                         Membership benefits, complimentary room night certificates, dining discounts, and passes must be redeemed strictly in accordance with the terms specified on each package. Government ID verification is required upon check-in at partner venues.
                     </p>
 
-                    <h2 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'var(--color-charcoal)' }}>4. Contact &amp; Inquiries</h2>
+                    <h2 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'var(--color-charcoal)' }}>4. Mobile App, OTP Security &amp; Fair Use</h2>
+                    <p style={{ marginBottom: '20px' }}>
+                        The DRS Deals platform, including the website and the official Android Application (in.drsdeals.app), enforces strict account security. Users agree not to engage in unauthorized scraping, reverse engineering, fraudulent pass duplication, or multi-account exploitation.
+                    </p>
+
+                    <h2 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'var(--color-charcoal)' }}>5. Governing Law &amp; Jurisdiction</h2>
+                    <p style={{ marginBottom: '20px' }}>
+                        These Terms of Service shall be governed by and construed in accordance with the laws of India. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts of New Delhi, India.
+                    </p>
+
+                    <h2 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'var(--color-charcoal)' }}>6. Contact &amp; Inquiries</h2>
                     <p style={{ marginBottom: '0' }}>
-                        For any questions regarding these terms, please contact our concierge team at <a href={`mailto:${siteConfig.contacts.conciergeEmail}`} style={{ color: 'var(--color-champagne-gold)', fontWeight: 600 }}>{siteConfig.contacts.conciergeEmail}</a> or call {siteConfig.contacts.hotline1}.
+                        For any questions regarding these terms, please contact our concierge team at <a href={`mailto:${siteConfig.contacts.conciergeEmail}`} style={{ color: 'var(--color-champagne-gold)', fontWeight: 600 }}>{siteConfig.contacts.conciergeEmail}</a> or call <a href={`tel:${siteConfig.contacts.hotline1Raw}`} style={{ color: 'var(--color-champagne-gold)', fontWeight: 600 }}>{siteConfig.contacts.hotline1}</a>.
                     </p>
                 </div>
             </div>

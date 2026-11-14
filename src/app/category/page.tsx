@@ -5,7 +5,10 @@ import { CATEGORY_METRICS } from '@/data/partners';
 
 export const metadata: Metadata = {
     title: 'Explore Categories | DRS Deals Verified Hospitality Privileges',
-    description: 'Explore Hotel & Resorts, Restaurants & Bars, Theme Parks, and Waterparks partnerships with DRS Deals across Delhi NCR and beyond.',
+    description: 'Explore Hotel & Resorts, Restaurants & Bars, Theme Parks, Waterparks, and Spa & Wellness partnerships with DRS Deals across Delhi NCR and beyond.',
+    alternates: {
+        canonical: 'https://www.drsdeals.in/category',
+    },
 };
 
 export default function CategoryDirectoryPage() {
@@ -37,6 +40,13 @@ export default function CategoryDirectoryPage() {
             image: '/images/webp/explore-category-waterparks.webp',
             count: '14+ Splash Parks',
             desc: CATEGORY_METRICS['waterparks'].description,
+        },
+        {
+            slug: 'spa',
+            title: 'Spa & Wellness',
+            image: '/images/webp/explore-category-spa.webp',
+            count: 'Sanctuary Privileges',
+            desc: 'Luxury spa treatment vouchers, holistic wellness therapies, hydrotherapy, and resort pool packages.',
         },
     ];
 

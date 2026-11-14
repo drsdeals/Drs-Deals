@@ -3,7 +3,6 @@ export interface CorporateClient {
     name: string;
     industry: string;
     logoUrl: string;
-    logoFallback: string;
     altText: string;
 }
 
@@ -13,7 +12,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Delhi Metro Rail Corporation (DMRC)',
         industry: 'Urban Transit & Infrastructure',
         logoUrl: '/corporateclients/delhi-metro.webp',
-        logoFallback: '/corporateclients/delhi metro.jpg',
         altText: 'Delhi Metro Rail Corporation (DMRC) Corporate Client of DRS Deals',
     },
     {
@@ -21,7 +19,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Tata Group',
         industry: 'Global Industrial Conglomerate',
         logoUrl: '/corporateclients/tata.webp',
-        logoFallback: '/corporateclients/tata.jpg',
         altText: 'Tata Group Corporate Client Partner with DRS Deals',
     },
     {
@@ -29,7 +26,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Bharti Airtel',
         industry: 'Telecommunications & Digital Services',
         logoUrl: '/corporateclients/airtel.webp',
-        logoFallback: '/corporateclients/airtel.jpg',
         altText: 'Bharti Airtel Corporate Client of DRS Deals',
     },
     {
@@ -37,7 +33,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Reliance Industries',
         industry: 'Energy, Retail & Digital Conglomerate',
         logoUrl: '/corporateclients/reliance.webp',
-        logoFallback: '/corporateclients/reliance.jpg',
         altText: 'Reliance Industries Corporate Client Partner with DRS Deals',
     },
     {
@@ -45,7 +40,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Maruti Suzuki India',
         industry: 'Automotive Manufacturing',
         logoUrl: '/corporateclients/maruti-suzuki.webp',
-        logoFallback: '/corporateclients/maruti suzuki.jpg',
         altText: 'Maruti Suzuki India Corporate Client of DRS Deals',
     },
     {
@@ -53,7 +47,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Wipro',
         industry: 'Global Technology & IT Consulting',
         logoUrl: '/corporateclients/wipro.webp',
-        logoFallback: '/corporateclients/wipro.jpg',
         altText: 'Wipro Technologies Corporate Client Partner of DRS Deals',
     },
     {
@@ -61,7 +54,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'HCL Technologies',
         industry: 'Global IT & Engineering Services',
         logoUrl: '/corporateclients/hcl.webp',
-        logoFallback: '/corporateclients/hcl.jpg',
         altText: 'HCL Technologies Corporate Client of DRS Deals',
     },
     {
@@ -69,7 +61,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Deloitte',
         industry: 'Professional Advisory & Consulting',
         logoUrl: '/corporateclients/deloitte.webp',
-        logoFallback: '/corporateclients/deloitte.jpg',
         altText: 'Deloitte Corporate Client Partner of DRS Deals',
     },
     {
@@ -77,7 +68,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Capgemini',
         industry: 'IT Consulting & Digital Services',
         logoUrl: '/corporateclients/capgemini.webp',
-        logoFallback: '/corporateclients/capgemini.jpg',
         altText: 'Capgemini Corporate Client Partner of DRS Deals',
     },
     {
@@ -85,7 +75,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'HSBC Bank',
         industry: 'Global Banking & Financial Services',
         logoUrl: '/corporateclients/hsbc.webp',
-        logoFallback: '/corporateclients/hsbc.jpg',
         altText: 'HSBC Bank Corporate Client of DRS Deals',
     },
     {
@@ -93,7 +82,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'NatWest Group',
         industry: 'International Commercial Banking',
         logoUrl: '/corporateclients/natwest.webp',
-        logoFallback: '/corporateclients/natwest.jpg',
         altText: 'NatWest Group Corporate Client Partner of DRS Deals',
     },
     {
@@ -101,7 +89,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Life Insurance Corporation of India (LIC)',
         industry: 'National Financial Institution & Insurance',
         logoUrl: '/corporateclients/lic.webp',
-        logoFallback: '/corporateclients/LIC.jpg',
         altText: 'Life Insurance Corporation of India (LIC) Corporate Client of DRS Deals',
     },
     {
@@ -109,7 +96,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Indian Oil Corporation (IOCL)',
         industry: 'Petroleum & National Energy Enterprise',
         logoUrl: '/corporateclients/indian-oil.webp',
-        logoFallback: '/corporateclients/indian oil.jpg',
         altText: 'Indian Oil Corporation Corporate Client Partner of DRS Deals',
     },
     {
@@ -117,7 +103,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'NTPC Limited',
         industry: 'National Power Generation Maharatna',
         logoUrl: '/corporateclients/ntpc.webp',
-        logoFallback: '/corporateclients/ntpc.jpg',
         altText: 'NTPC Limited Corporate Client of DRS Deals',
     },
     {
@@ -125,7 +110,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Adani Power',
         industry: 'Energy & Thermal Power Infrastructure',
         logoUrl: '/corporateclients/adani-power.webp',
-        logoFallback: '/corporateclients/adani power.jpg',
         altText: 'Adani Power Corporate Client Partner of DRS Deals',
     },
     {
@@ -133,7 +117,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Blue Dart Express',
         industry: 'Express Logistics & Aviation Transport',
         logoUrl: '/corporateclients/blue-dart.webp',
-        logoFallback: '/corporateclients/blue dart.jpg',
         altText: 'Blue Dart Express Corporate Client of DRS Deals',
     },
     {
@@ -141,7 +124,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'DP World',
         industry: 'Global Ports & Smart Logistics',
         logoUrl: '/corporateclients/dp-world.webp',
-        logoFallback: '/corporateclients/dp world.jpg',
         altText: 'DP World Corporate Client Partner of DRS Deals',
     },
     {
@@ -149,7 +131,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Procter & Gamble (P&G)',
         industry: 'Consumer Goods & FMCG Global Leader',
         logoUrl: '/corporateclients/p-and-g.webp',
-        logoFallback: '/corporateclients/p&g.jpg',
         altText: 'Procter & Gamble (P&G) Corporate Client of DRS Deals',
     },
     {
@@ -157,7 +138,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Yakult Danone India',
         industry: 'Probiotic Health & Nutrition Science',
         logoUrl: '/corporateclients/yakul.webp',
-        logoFallback: '/corporateclients/yakul.jpg',
         altText: 'Yakult Danone India Corporate Client of DRS Deals',
     },
     {
@@ -165,7 +145,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Hitachi',
         industry: 'Digital Systems & Industrial Technology',
         logoUrl: '/corporateclients/hitachi.webp',
-        logoFallback: '/corporateclients/hitachi.jpg',
         altText: 'Hitachi Corporate Client Partner of DRS Deals',
     },
     {
@@ -173,7 +152,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Mitsubishi Electric',
         industry: 'Advanced Automation & Electronics',
         logoUrl: '/corporateclients/mitsubishi-electric.webp',
-        logoFallback: '/corporateclients/mitsubishi electric.jpg',
         altText: 'Mitsubishi Electric Corporate Client of DRS Deals',
     },
     {
@@ -181,7 +159,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Continental',
         industry: 'Automotive Technology & Mobility Solutions',
         logoUrl: '/corporateclients/continental.webp',
-        logoFallback: '/corporateclients/continental.jpg',
         altText: 'Continental Automotive Corporate Client of DRS Deals',
     },
     {
@@ -189,7 +166,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Motherson Sumi Systems',
         industry: 'Global Automotive Component Manufacturing',
         logoUrl: '/corporateclients/mother-sumi.webp',
-        logoFallback: '/corporateclients/mother sumi.jpg',
         altText: 'Motherson Sumi Systems Corporate Client of DRS Deals',
     },
     {
@@ -197,7 +173,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Indus Towers',
         industry: 'Passive Telecom Infrastructure',
         logoUrl: '/corporateclients/indus-towers.webp',
-        logoFallback: '/corporateclients/indus towers.jpg',
         altText: 'Indus Towers Corporate Client Partner of DRS Deals',
     },
     {
@@ -205,7 +180,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'RailTel Corporation of India',
         industry: 'Railway Telecom & ICT Infrastructure',
         logoUrl: '/corporateclients/raitel.webp',
-        logoFallback: '/corporateclients/raitel.jpg',
         altText: 'RailTel Corporation Corporate Client of DRS Deals',
     },
     {
@@ -213,7 +187,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'HFCL Group',
         industry: 'Optical Fiber & Telecom Technologies',
         logoUrl: '/corporateclients/hfcl-group.webp',
-        logoFallback: '/corporateclients/hfcl group.jpg',
         altText: 'HFCL Group Corporate Client of DRS Deals',
     },
     {
@@ -221,7 +194,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Country Delight',
         industry: 'Direct-to-Consumer AgriTech & Pure Dairy',
         logoUrl: '/corporateclients/country-delhight.webp',
-        logoFallback: '/corporateclients/country delhight.jpg',
         altText: 'Country Delight Corporate Client of DRS Deals',
     },
     {
@@ -229,7 +201,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'DS Group (Dharampal Satyapal)',
         industry: 'Diversified FMCG & Hospitality Conglomerate',
         logoUrl: '/corporateclients/ds-group.webp',
-        logoFallback: '/corporateclients/ds group.jpg',
         altText: 'DS Group Corporate Client Partner of DRS Deals',
     },
     {
@@ -237,7 +208,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'ACT Fibernet',
         industry: 'High-Speed Broadband & Fiber Connectivity',
         logoUrl: '/corporateclients/sct-fibernet.webp',
-        logoFallback: '/corporateclients/sct fibernet.jpg',
         altText: 'ACT Fibernet Corporate Client of DRS Deals',
     },
     {
@@ -245,7 +215,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'FIS Global',
         industry: 'Financial Technology & Processing Solutions',
         logoUrl: '/corporateclients/fis.webp',
-        logoFallback: '/corporateclients/fis.jpg',
         altText: 'FIS Global Corporate Client of DRS Deals',
     },
     {
@@ -253,7 +222,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'U.S. Embassy & Consulates India',
         industry: 'Diplomatic Mission & International Relations',
         logoUrl: '/corporateclients/usa-embassy.webp',
-        logoFallback: '/corporateclients/usa embassy.jpg',
         altText: 'U.S. Embassy & Consulates Corporate Client Partner of DRS Deals',
     },
     {
@@ -261,7 +229,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Institute of Company Secretaries of India (ICSI)',
         industry: 'Statutory Professional Regulatory Body',
         logoUrl: '/corporateclients/company-secretaries-of-india.webp',
-        logoFallback: '/corporateclients/company secretaries of India.jpg',
         altText: 'ICSI Corporate Client Partner of DRS Deals',
     },
     {
@@ -269,7 +236,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'National Fertilizers Limited (NFL)',
         industry: 'Agrochemicals & Miniratna Public Sector Enterprise',
         logoUrl: '/corporateclients/national-fertizlizer-limited.webp',
-        logoFallback: '/corporateclients/national fertizlizer limited.jpg',
         altText: 'National Fertilizers Limited Corporate Client of DRS Deals',
     },
     {
@@ -277,7 +243,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'National Power Training Institute (NPTI)',
         industry: 'Ministry of Power, Govt. of India',
         logoUrl: '/corporateclients/npti.webp',
-        logoFallback: '/corporateclients/npti.jpg',
         altText: 'National Power Training Institute Corporate Client of DRS Deals',
     },
     {
@@ -285,7 +250,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Paramount Bed',
         industry: 'Advanced Medical & Healthcare Technology',
         logoUrl: '/corporateclients/paramount-bed.webp',
-        logoFallback: '/corporateclients/paramount bed.jpg',
         altText: 'Paramount Bed Corporate Client of DRS Deals',
     },
     {
@@ -293,7 +257,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Rajdarbar Group',
         industry: 'Real Estate & Infrastructure Development',
         logoUrl: '/corporateclients/raj-darbar.webp',
-        logoFallback: '/corporateclients/raj darbar.jpg',
         altText: 'Rajdarbar Group Corporate Client Partner of DRS Deals',
     },
     {
@@ -301,7 +264,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'Sagacious IP',
         industry: 'Global Patent Research & IP Intelligence',
         logoUrl: '/corporateclients/sagacious-ip.webp',
-        logoFallback: '/corporateclients/sagacious IP.jpg',
         altText: 'Sagacious IP Corporate Client Partner of DRS Deals',
     },
     {
@@ -309,7 +271,6 @@ export const CORPORATE_CLIENTS: CorporateClient[] = [
         name: 'The Business Backbone',
         industry: 'Strategic Corporate Consulting & Growth Advisory',
         logoUrl: '/corporateclients/the-business-backbone.webp',
-        logoFallback: '/corporateclients/the business backbone.jpg',
         altText: 'The Business Backbone Corporate Client of DRS Deals',
     },
 ];

@@ -1,17 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BlogPost } from '@/data/blogs';
 
 export default function BlogCard({ post }: { post: BlogPost }) {
     return (
         <div className="blog-card shadow-soft" style={{ background: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--color-stone)', display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none', display: 'block', overflow: 'hidden', height: '200px' }}>
-                <img 
+            <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none', display: 'block', overflow: 'hidden', height: '200px', position: 'relative' }}>
+                <Image 
                     src={post.image} 
                     alt={post.imageAlt}
                     width={400}
                     height={225}
-                    loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
                     className="hover-zoom"
                 />

@@ -230,7 +230,7 @@ export default function BlogClient() {
 
                 {/* Posts Grid */}
                 {paginatedPosts.length > 0 ? (
-                    <div className="grid grid-3" style={{ gap: '32px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '32px' }}>
                         {paginatedPosts.map((post) => (
                             <BlogCard key={post.slug} post={post} />
                         ))}

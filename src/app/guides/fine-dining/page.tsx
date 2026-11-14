@@ -19,7 +19,7 @@ export default function FineDiningGuidePage() {
                         Mumbai&apos;s culinary scene is a vibrant blend of historical luxury and contemporary gastronomy. From sea-facing dining rooms in Colaba to modern Asian eateries in BKC, DRS Deals provides exclusive 25% to 40% savings on 5-star hotel buffets and chef&apos;s tasting menus.
                     </p>
                     <div style={{ marginTop: '32px' }}>
-                        <Link href="/experiences/dining" className="btn btn-primary">Explore Dining Offers</Link>
+                        <Link href="/category/restaurants-bars" className="btn btn-primary">Explore Dining Offers</Link>
                     </div>
                 </div>
             </div>

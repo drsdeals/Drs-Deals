@@ -5,11 +5,20 @@ import { getAllDeals } from '@/data/deals';
 
 export const metadata: Metadata = {
     title: 'Mumbai Luxury Resort & Hotel Offers | DRS Deals',
-    description: 'Exclusive coastal resort vouchers, luxury dining passes, and weekend getaway memberships.',
+    description: 'Exclusive coastal resort vouchers, luxury dining passes, and weekend getaway memberships by DRS Deals.',
+    alternates: {
+        canonical: 'https://www.drsdeals.in/destinations/mumbai',
+    },
 };
 
 export default function MumbaiDestinationPage() {
-    const deals = getAllDeals();
+    // Curated flagship resort and luxury getaway partners serving Western India and regional travelers
+    const displayDeals = getAllDeals().filter((d) => 
+        d.id === 'wyndham-garden-sonipat' ||
+        d.slug === 'wyndham-garden-sonipat-murthal' || 
+        d.id === 'oren-kasauli' || 
+        d.id === 'haut-monde-neemrana'
+    );
 
     return (
         <main className="section-padding bg-ivory" style={{ paddingTop: '140px' }}>
@@ -27,7 +36,7 @@ export default function MumbaiDestinationPage() {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
-                    {deals.slice(0, 6).map((deal) => (
+                    {displayDeals.map((deal) => (
                         <div key={deal.id} className="bg-white shadow-soft" style={{ borderRadius: '16px', padding: '28px', border: '1px solid var(--color-stone)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                             <div>
                                 {deal.featuredImage ? (

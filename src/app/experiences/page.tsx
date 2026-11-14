@@ -11,31 +11,31 @@ export default function ExperiencesOverviewPage() {
     const categories = [
         {
             title: 'Resorts & Hotels',
-            slug: 'resorts',
+            href: '/category/hotel-resorts',
             img: '/images/webp/explore-category-resorts.webp',
             desc: 'Five-star weekend escapes, heritage palace stays, and luxury pool villas with verified breakfast & dining inclusions.',
         },
         {
             title: 'Fine Dining',
-            slug: 'dining',
+            href: '/category/restaurants-bars',
             img: '/images/webp/explore-category-dining.webp',
             desc: 'Chef’s tasting menus, buffet passes, and exclusive beverage privileges at top-rated hotel dining venues.',
         },
         {
             title: 'Spa & Wellness',
-            slug: 'spa',
+            href: '/category/spa',
             img: '/images/webp/explore-category-spa.webp',
             desc: 'Ayurvedic wellness therapies, couples spa packages, and hydrotherapy retreats at 40% verified savings.',
         },
         {
             title: 'Water Parks & Amusement',
-            slug: 'water-parks',
+            href: '/category/waterparks',
             img: '/images/webp/hero-collage-overlay-top-right.webp',
             desc: 'Family adventure passes, wave pool day passes, and thrill park group tickets at guaranteed lowest prices.',
         },
         {
-            title: 'Private Farmhouses',
-            slug: 'farmhouses',
+            title: 'Private Farmhouses & Theme Parks',
+            href: '/category/theme-parks',
             img: '/images/webp/why-drs-deals-exists.webp',
             desc: 'Secluded pool farmhouses and private estate rentals for family celebrations, corporate retreats, and weekend gatherings.',
         },
@@ -56,7 +56,7 @@ export default function ExperiencesOverviewPage() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', marginBottom: '64px' }}>
                     {categories.map((cat) => (
-                        <div key={cat.slug} className="shadow-soft" style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--color-stone)' }}>
+                        <div key={cat.href} className="shadow-soft" style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--color-stone)' }}>
                             <div style={{ height: '220px', overflow: 'hidden' }}>
                                 <img src={cat.img} alt={cat.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
@@ -67,7 +67,7 @@ export default function ExperiencesOverviewPage() {
                                 <p style={{ fontSize: '0.95rem', color: 'var(--color-charcoal-light)', lineHeight: 1.6, marginBottom: '24px' }}>
                                     {cat.desc}
                                 </p>
-                                <Link href={`/experiences/${cat.slug}`} className="btn btn-outline" style={{ width: '100%', textAlign: 'center' }}>
+                                <Link href={cat.href} className="btn btn-outline" style={{ width: '100%', textAlign: 'center' }}>
                                     Explore {cat.title} Offers
                                 </Link>
                             </div>

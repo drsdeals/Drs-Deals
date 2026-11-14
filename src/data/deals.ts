@@ -122,7 +122,7 @@ export const DEALS_DATA: Deal[] = [
         propertyName: 'Oren Kasauli',
         tagline: 'One Year of Stay, Dining, Wellness and Leisure Benefits in Kasauli',
         category: 'hotel-resorts',
-        categories: ['hotel-resorts'],
+        categories: ['hotel-resorts', 'spa'],
         categoryLabel: 'Luxury Hill Resort & Spa',
         location: 'Kasauli, Himachal Pradesh',
         stateRegion: 'Delhi NCR and More',

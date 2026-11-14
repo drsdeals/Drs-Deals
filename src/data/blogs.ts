@@ -93,9 +93,9 @@ export const BLOG_POSTS: BlogPost[] = [
         const imgObj = DESTINATION_IMAGES[i % DESTINATION_IMAGES.length];
         return {
             slug: `destinations-guide-${i + 1}`,
-            title: `Exploring Regional Destinations: Finding Top Local Escapes in #${destName}`,
+            title: `Exploring Regional Destinations: Top Local Escapes in ${destName} #${i + 1}`,
             category: 'Destinations & Travel' as const,
-            excerpt: `Exploring premier regional destinations and local getaway spots in Delhi NCR and More.`,
+            excerpt: `Exploring premier regional destinations and local getaway spots across ${destName} and beyond.`,
             readTime: '5 min read',
             publishedDate: 'August 2026',
             author: 'DRS Deals Editorial Team',

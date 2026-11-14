@@ -19,7 +19,7 @@ export default function FamilyParksGuidePage() {
                         Planning a summer day out with family requires finding venues with clean water filtration, safety-certified slides, and comfortable dining amenities. DRS Deals lists verified water parks across Noida, Gurgaon, Pune, and Jaipur with exclusive family group pass savings.
                     </p>
                     <div style={{ marginTop: '32px' }}>
-                        <Link href="/experiences/water-parks" className="btn btn-primary">Explore Water Park Offers</Link>
+                        <Link href="/category/waterparks" className="btn btn-primary">Explore Water Park Offers</Link>
                     </div>
                 </div>
             </div>

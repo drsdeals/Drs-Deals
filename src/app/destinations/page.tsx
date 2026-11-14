@@ -32,7 +32,7 @@ export default function DestinationsPage() {
             name: 'Mumbai & Coastal Escapes',
             slug: 'mumbai',
             href: '/destinations/mumbai',
-            img: '/images/webp/cities-we-serve-ahmedabad.webp',
+            img: '/images/webp/explore-category-resorts.webp',
             tag: 'Curated Luxury Stays',
             desc: 'Luxury resort suites, gourmet fine dining passes, theme park tickets, and relaxing coastal spa wellness retreats.',
         },

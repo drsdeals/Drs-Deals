@@ -27,22 +27,29 @@ export default function RotatingDealGallery({
     });
 
     const [activeIdx, setActiveIdx] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
-    // Auto-rotate main image every 2 seconds (2000ms)
+    // Auto-rotate main image every 4 seconds (4000ms), pausing on hover/focus
     useEffect(() => {
-        if (allImages.length <= 1) return;
+        if (allImages.length <= 1 || isPaused) return;
 
         const timer = setInterval(() => {
             setActiveIdx((prev) => (prev + 1) % allImages.length);
-        }, 2000);
+        }, 4000);
 
         return () => clearInterval(timer);
-    }, [allImages.length]);
+    }, [allImages.length, isPaused]);
 
     const activeImageSrc = allImages.length > 0 ? allImages[activeIdx] : null;
 
     return (
-        <div className="rotating-deal-gallery">
+        <div 
+            className="rotating-deal-gallery"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onFocus={() => setIsPaused(true)}
+            onBlur={() => setIsPaused(false)}
+        >
             {/* Main Rotating Large Image */}
             <div className="gallery-main-viewport">
                 {activeImageSrc ? (
@@ -70,15 +77,14 @@ export default function RotatingDealGallery({
 
             {/* Thumbnail Row */}
             <div className="gallery-thumbnail-grid">
-                {galleryImages.length > 0 ? (
-                    galleryImages.map((imgUrl, i) => {
-                        const globalIdx = allImages.indexOf(imgUrl);
-                        const isActive = globalIdx === activeIdx;
+                {allImages.length > 0 ? (
+                    allImages.map((imgUrl, i) => {
+                        const isActive = i === activeIdx;
                         return (
                             <button
                                 key={`thumb-${i}`}
                                 type="button"
-                                onClick={() => setActiveIdx(globalIdx >= 0 ? globalIdx : i)}
+                                onClick={() => setActiveIdx(i)}
                                 className={`gallery-thumb-btn ${isActive ? 'active' : ''}`}
                                 aria-label={`Select ${propertyName} photo ${i + 1}`}
                             >

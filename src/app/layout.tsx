@@ -110,15 +110,12 @@ export default function RootLayout({
                 url: `${siteConfig.url}/`,
                 logo: `${siteConfig.url}${siteConfig.logo}`,
                 foundingDate: '2003',
-                founder: {
-                    '@type': 'Person',
-                    name: siteConfig.founder.name,
-                    url: siteConfig.founder.url,
-                },
                 sameAs: [
+                    'https://github.com/drsdeals/Drs-Deals',
                     'https://github.com/yashveer-singh-speaks/drs-deals',
                 ],
                 description: 'India’s premier curated platform for exclusive luxury hospitality, fine dining, spa wellness, and resort memberships since 2003.',
+                publishingPrinciples: `${siteConfig.url}/about`,
                 contactPoint: [
                     {
                         '@type': 'ContactPoint',
@@ -134,6 +131,16 @@ export default function RootLayout({
                 '@id': `${siteConfig.url}/#website`,
                 url: `${siteConfig.url}/`,
                 name: siteConfig.name,
+                creator: {
+                    '@type': 'Organization',
+                    name: siteConfig.creator.name,
+                    url: siteConfig.creator.url,
+                },
+                author: {
+                    '@type': 'Person',
+                    name: siteConfig.founder.name,
+                    url: siteConfig.founder.url,
+                },
                 publisher: {
                     '@id': `${siteConfig.url}/#organization`,
                 },

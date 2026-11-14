@@ -79,7 +79,7 @@ export default function Home() {
                     <div className="hero-mobile-stage">
                         <div className="hero-mobile-text">
                             <div className="hero-eyebrow">PREMIUM LEISURE PRIVILEGES &amp; BRAND PARTNERSHIPS</div>
-                            <h1 className="hero-title">
+                            <h1 className="hero-title hero-title-mobile-visual">
                                 More Experiences. <br />
                                 More Memories. <br />
                                 <span className="text-gold">For Less.</span>

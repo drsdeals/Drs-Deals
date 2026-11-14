@@ -34,25 +34,44 @@ export default function SearchClient() {
     const allDeals = getAllDeals();
 
     const matchedDeals = allDeals.filter((deal) => {
-        if (!query.trim()) return true;
-        const q = query.toLowerCase();
-        return (
-            deal.propertyName.toLowerCase().includes(q) ||
-            deal.title.toLowerCase().includes(q) ||
-            deal.location.toLowerCase().includes(q) ||
-            deal.categoryLabel.toLowerCase().includes(q) ||
-            deal.overview.some((ov) => ov.toLowerCase().includes(q))
-        );
+        const cleanQ = query.trim().toLowerCase();
+        if (!cleanQ) return true;
+        const terms = cleanQ.split(/\s+/).filter(Boolean);
+        
+        const searchableText = [
+            deal.propertyName,
+            deal.title,
+            deal.tagline,
+            deal.location,
+            deal.categoryLabel,
+            deal.category,
+            ...(deal.categories || []),
+            ...(deal.overview || []),
+            ...(deal.whyChoose || [])
+        ].join(' ').toLowerCase();
+
+        return terms.every((term) => {
+            const singular = term.endsWith('s') ? term.slice(0, -1) : term;
+            return searchableText.includes(term) || searchableText.includes(singular);
+        });
     });
 
     const matchedBlogs = BLOG_POSTS.filter((post) => {
-        if (!query.trim()) return true;
-        const q = query.toLowerCase();
-        return (
-            post.title.toLowerCase().includes(q) ||
-            post.category.toLowerCase().includes(q) ||
-            post.excerpt.toLowerCase().includes(q)
-        );
+        const cleanQ = query.trim().toLowerCase();
+        if (!cleanQ) return true;
+        const terms = cleanQ.split(/\s+/).filter(Boolean);
+
+        const searchableText = [
+            post.title,
+            post.excerpt,
+            post.category,
+            ...(post.tags || [])
+        ].join(' ').toLowerCase();
+
+        return terms.every((term) => {
+            const singular = term.endsWith('s') ? term.slice(0, -1) : term;
+            return searchableText.includes(term) || searchableText.includes(singular);
+        });
     });
 
     const totalResults =

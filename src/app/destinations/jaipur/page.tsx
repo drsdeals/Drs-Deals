@@ -12,7 +12,12 @@ export const metadata: Metadata = {
 };
 
 export default function JaipurDestinationPage() {
-    const deals = getAllDeals();
+    const deals = getAllDeals().filter((d) => 
+        d.location.toLowerCase().includes('rajasthan') || 
+        d.location.toLowerCase().includes('neemrana') ||
+        d.id === 'haut-monde-neemrana'
+    );
+    const displayDeals = deals.length > 0 ? deals : getAllDeals().slice(0, 3);
 
     return (
         <main className="section-padding bg-ivory" style={{ paddingTop: '140px' }}>
@@ -30,7 +35,7 @@ export default function JaipurDestinationPage() {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
-                    {deals.slice(0, 6).map((deal) => (
+                    {displayDeals.map((deal) => (
                         <div key={deal.id} className="bg-white shadow-soft" style={{ borderRadius: '16px', padding: '28px', border: '1px solid var(--color-stone)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                             <div>
                                 {deal.featuredImage ? (

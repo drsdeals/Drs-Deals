@@ -10,7 +10,6 @@ The DRS Deals digital platform, web application architecture, SEO, AEO, GEO, and
 
 - [DRS Deals Homepage](https://www.drsdeals.in/): Curated luxury resorts, fine dining, water parks, and hospitality memberships in Delhi NCR and More.
 - [Active Deals & Memberships Catalog](https://www.drsdeals.in/deals): Complete directory of verified hotel membership booklets and day outing passes.
-- [Explore All Experiences](https://www.drsdeals.in/explore): Browse all curated luxury hospitality and leisure packages.
 - [How DRS Deals Works](https://www.drsdeals.in/how-it-works): Four-step concierge consultation and direct property reservation process.
 - [About DRS Deals](https://www.drsdeals.in/about): Our 23-year legacy since 2003, core hospitality pillars, and company background.
 - [Partner With Us](https://www.drsdeals.in/partners): B2B venue onboarding for 5-star hotels, resorts, restaurants, and entertainment parks.
@@ -32,11 +31,11 @@ The DRS Deals digital platform, web application architecture, SEO, AEO, GEO, and
 
 ## Experience Categories & Regional Hubs
 
-- [Luxury Resorts & Hotels](https://www.drsdeals.in/experiences/resorts): Five-star weekend escapes, hill station retreats, and heritage palace stays.
-- [Fine Dining & Buffet Passes](https://www.drsdeals.in/experiences/dining): Gourmet chef tables, 5-star hotel buffets, and BOGO dining privileges.
-- [Spa & Holistic Wellness](https://www.drsdeals.in/experiences/spa): Luxury spa therapies, wellness retreats, and resort pool packages.
-- [Water Parks & Theme Destinations](https://www.drsdeals.in/experiences/water-parks): Family wave pools, snow parks, and amusement ride passes.
-- [Private Farmhouses & Day Outings](https://www.drsdeals.in/experiences/farmhouses): Rural village theme farms and all-inclusive day picnic packages.
+- [Luxury Resorts & Hotels](https://www.drsdeals.in/category/hotel-resorts): Five-star weekend escapes, hill station retreats, and heritage palace stays.
+- [Fine Dining & Buffet Passes](https://www.drsdeals.in/category/restaurants-bars): Gourmet chef tables, 5-star hotel buffets, and BOGO dining privileges.
+- [Spa & Holistic Wellness](https://www.drsdeals.in/category/spa): Luxury spa therapies, wellness retreats, and resort pool packages.
+- [Water Parks & Theme Destinations](https://www.drsdeals.in/category/waterparks): Family wave pools, snow parks, and amusement ride passes.
+- [Theme Parks & Day Outings](https://www.drsdeals.in/category/theme-parks): Rural village theme farms and all-inclusive day picnic packages.
 - [Delhi NCR and More Regional Hub](https://www.drsdeals.in/destinations/delhi): Curated hospitality offers across Delhi NCR and More.
 
 ## Editorial Journal, Guides & Architecture

@@ -20,8 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/category/restaurants-bars`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.9 },
         { url: `${baseUrl}/category/theme-parks`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.9 },
         { url: `${baseUrl}/category/waterparks`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.9 },
+        { url: `${baseUrl}/category/spa`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.9 },
         { url: `${baseUrl}/experiences`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.85 },
-        { url: `${baseUrl}/experiences/spa`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.85 },
         
         // Destinations
         { url: `${baseUrl}/destinations`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.85 },

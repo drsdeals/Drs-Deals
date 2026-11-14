@@ -2,10 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getFeaturedDeals, getAllDeals } from '@/data/deals';
+import DealCard from '@/components/DealCard';
 
 export const metadata: Metadata = {
     title: 'Exclusive Deals & Hotel Memberships | DRS Deals',
     description: 'Explore verified memberships and deals on luxury stays, fine dining, water parks, and resort packages across Delhi NCR and More.',
+    alternates: {
+        canonical: 'https://www.drsdeals.in/deals',
+    },
 };
 
 export default function DealsPage() {
@@ -46,46 +50,7 @@ export default function DealsPage() {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
                         {featuredDeals.map((deal) => (
-                            <div key={deal.id} className="bg-white shadow-soft" style={{ borderRadius: '16px', padding: '28px', border: '1px solid var(--color-stone)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                                <div>
-                                    {/* Image Box */}
-                                    {deal.featuredImage ? (
-                                        <div style={{ height: '200px', borderRadius: '12px', overflow: 'hidden', marginBottom: '20px', border: '1px solid var(--color-stone)' }}>
-                                            <img src={deal.featuredImage} alt={deal.propertyName} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                        </div>
-                                    ) : (
-                                        <div className="skeleton-box" style={{ height: '200px', borderRadius: '12px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.85rem', color: 'var(--color-charcoal-light)', border: '1px solid var(--color-stone)' }}>
-                                            📷 {deal.propertyName} Image Placeholder
-                                        </div>
-                                    )}
-
-                                    <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-champagne-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '6px' }}>
-                                        {deal.categoryLabel}
-                                    </div>
-                                    <h3 style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--color-charcoal)', marginBottom: '8px', lineHeight: 1.3 }}>
-                                        {deal.propertyName}
-                                    </h3>
-                                    <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal-light)', marginBottom: '16px' }}>
-                                        📍 {deal.location}
-                                    </p>
-
-                                    <div style={{ padding: '16px', background: 'var(--color-ivory)', borderRadius: '10px', border: '1px solid var(--color-stone)', marginBottom: '20px' }}>
-                                        <div style={{ fontSize: '0.8rem', color: 'var(--color-charcoal-light)', textTransform: 'uppercase' }}>Member Price</div>
-                                        <div style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--color-charcoal)', fontFamily: 'var(--font-serif)' }}>
-                                            {deal.price}
-                                        </div>
-                                        {deal.estimatedValue && (
-                                            <div style={{ fontSize: '0.85rem', color: '#27ae60', fontWeight: 600, marginTop: '2px' }}>
-                                                Benefit Value: {deal.estimatedValue}
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <Link href={`/deals/${deal.slug}`} className="btn btn-primary" style={{ textAlign: 'center', width: '100%' }}>
-                                    View Membership Details
-                                </Link>
-                            </div>
+                            <DealCard key={deal.id} deal={deal} />
                         ))}
                     </div>
                 </div>

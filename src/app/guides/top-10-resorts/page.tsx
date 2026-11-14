@@ -19,7 +19,7 @@ export default function TopResortsGuidePage() {
                         Delhi NCR residents looking for a tranquil weekend getaway have a wealth of world-class resort options within a 2 to 4 hour driving radius. From heritage retreats in Neemrana and Manesar to sprawling luxury golf resorts along the Aravalli hills in Gurgaon, our editorial team evaluates each property for service excellence, pool cleanliness, culinary quality, and member value.
                     </p>
                     <div style={{ marginTop: '32px' }}>
-                        <Link href="/experiences/resorts" className="btn btn-primary">Explore Resort Offers</Link>
+                        <Link href="/category/hotel-resorts" className="btn btn-primary">Explore Resort Offers</Link>
                     </div>
                 </div>
             </div>

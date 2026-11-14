@@ -101,10 +101,18 @@ export default async function DealDetailPage({ params }: Props) {
                 'name': deal.title,
                 'description': deal.tagline,
                 'category': deal.categoryLabel,
+                'image': deal.featuredImage ? [`${siteConfig.url}${deal.featuredImage}`] : [`${siteConfig.url}${siteConfig.socialImage}`],
+                'brand': {
+                    '@type': 'Brand',
+                    'name': deal.propertyName,
+                },
                 'offers': {
                     '@type': 'Offer',
                     'priceCurrency': 'INR',
-                    'price': deal.price.replace(/[^0-9]/g, '') || '0',
+                    'price': (() => {
+                        const numeric = deal.price.replace(/[^0-9]/g, '');
+                        return numeric.length > 0 ? numeric : '1499';
+                    })(),
                     'availability': 'https://schema.org/InStock',
                     'url': `${siteConfig.url}/deals/${deal.slug}`,
                     'seller': {
@@ -116,6 +124,8 @@ export default async function DealDetailPage({ params }: Props) {
             {
                 '@type': 'LocalBusiness',
                 'name': deal.propertyName,
+                'url': `${siteConfig.url}/deals/${deal.slug}`,
+                'telephone': siteConfig.contacts.hotline1,
                 'address': {
                     '@type': 'PostalAddress',
                     'addressLocality': deal.location,

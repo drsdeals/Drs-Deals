@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import * as THREE from 'three';
 import { siteConfig } from '@/config/site';
 
@@ -159,6 +160,7 @@ function calculateResponsiveConfig(width: number, height: number) {
 
 export default function PartnerLogoSphere() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -401,6 +403,11 @@ export default function PartnerLogoSphere() {
             const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
             startMouse = { x: clientX, y: clientY };
             previousMouse = { x: clientX, y: clientY };
+
+            // Update mouse coordinates immediately so taps/clicks on mobile register raycasting
+            const rect = container.getBoundingClientRect();
+            mouse.x = ((clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((clientY - rect.top) / rect.height) * 2 + 1;
         };
 
         const onPointerMove = (e: MouseEvent | TouchEvent) => {
@@ -437,7 +444,7 @@ export default function PartnerLogoSphere() {
 
         const onClick = () => {
             if (!draggedSinceDown && hoveredLogo && hoveredLogo.userData.href) {
-                window.location.href = hoveredLogo.userData.href;
+                router.push(hoveredLogo.userData.href);
             }
         };
 
@@ -466,11 +473,13 @@ export default function PartnerLogoSphere() {
         window.addEventListener('touchmove', onPointerMove, { passive: true });
         window.addEventListener('touchend', onPointerUp);
 
+        let isIntersecting = true;
         /* ─── Render Loop ─── */
         let animId = 0;
         const clock = new THREE.Clock();
 
         const render = () => {
+            if (!isIntersecting) return;
             animId = requestAnimationFrame(render);
             const elapsedTime = clock.getElapsedTime();
 
@@ -622,10 +631,40 @@ export default function PartnerLogoSphere() {
             renderer.render(scene, camera);
         };
 
+        const observer = new IntersectionObserver(([entry]) => {
+            isIntersecting = entry.isIntersecting;
+            if (isIntersecting) {
+                cancelAnimationFrame(animId);
+                animId = requestAnimationFrame(render);
+            }
+        }, { threshold: 0.05 });
+
+        observer.observe(container);
+
         animId = requestAnimationFrame(render);
 
         return () => {
+            observer.disconnect();
             cancelAnimationFrame(animId);
+
+            // Clean up 3D materials, textures and geometries to prevent WebGL leaks
+            scene.traverse((obj) => {
+                if (obj instanceof THREE.Mesh) {
+                    if (obj.geometry) obj.geometry.dispose();
+                    if (obj.material) {
+                        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
+                        mats.forEach((m) => {
+                            if ('uniforms' in m) {
+                                const sm = m as THREE.ShaderMaterial;
+                                if (sm.uniforms?.map?.value) sm.uniforms.map.value.dispose();
+                                if (sm.uniforms?.uTexture?.value) sm.uniforms.uTexture.value.dispose();
+                            }
+                            m.dispose();
+                        });
+                    }
+                }
+            });
+
             renderer.dispose();
             container.innerHTML = '';
             

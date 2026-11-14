@@ -62,6 +62,11 @@ const nextConfig: NextConfig = {
                 destination: '/category/waterparks',
                 permanent: true,
             },
+            {
+                source: '/experiences/spa',
+                destination: '/category/spa',
+                permanent: true,
+            },
         ];
     },
     async headers() {

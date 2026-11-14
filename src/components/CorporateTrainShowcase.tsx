@@ -9,7 +9,7 @@ export default function CorporateTrainShowcase() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [speed, setSpeed] = useState<SpeedMultiplier>(1);
     const [isPlaying, setIsPlaying] = useState(true);
-    const [isVisible, setIsVisible] = useState(false); // Controls the pop-up animation state
+    const [isVisible, setIsVisible] = useState(true); // Controls the pop-up animation state
 
     const totalClients = CORPORATE_CLIENTS.length;
     const currentClient: CorporateClient = CORPORATE_CLIENTS[currentIndex];
@@ -37,6 +37,7 @@ export default function CorporateTrainShowcase() {
         if (!isPlaying) {
             if (timerRef.current) clearInterval(timerRef.current);
             if (stateTimerRef.current) clearTimeout(stateTimerRef.current);
+            setIsVisible(true);
             return;
         }
 
@@ -99,13 +100,6 @@ export default function CorporateTrainShowcase() {
                                     src={currentClient.logoUrl}
                                     alt={currentClient.altText}
                                     className="client-logo-img"
-                                    onError={(e) => {
-                                        const target = e.currentTarget;
-                                        if (!target.dataset.failed) {
-                                            target.dataset.failed = 'true';
-                                            target.src = currentClient.logoFallback;
-                                        }
-                                    }}
                                 />
                             </div>
                             <div className="client-info-text">

@@ -64,7 +64,7 @@ ${contextKnowledge}
                         'Authorization': `Bearer ${apiKey}`,
                     },
                     body: JSON.stringify({
-                        model: 'nvidia/nemotron-3-nano-30b-a3b',
+                        model: 'meta/llama-3.2-3b-instruct',
                         messages: [
                             { role: 'system', content: systemPrompt },
                             ...(Array.isArray(conversationHistory) ? conversationHistory.slice(-6) : []),
@@ -116,7 +116,7 @@ ${contextKnowledge}
             reply = `Madhavgarh Farms Gurgaon Day Outing offers authentic rural village food and 50+ activities for the morning slot (9 AM to 5 PM). Advance booking required via ${siteConfig.contacts.hotline1}.`;
         } else if (q.includes('mojoland')) {
             reply = `Mojoland Multi Theme Park Murthal Combo Pass is priced at ₹700 for ANY TWO PARKS (Water, Adventure, Amusement, or Snow Park). Call ${siteConfig.contacts.hotline1} to book.`;
-        } else if (q.includes('how it works') || q.includes('how to book') || q.includes('how do i buy') || q.includes('payment')) {
+        } else if (q.includes('how it works') || q.includes('how to book') || q.includes('how do i buy') || q.includes('payment') || q.includes('how does booking work') || q.includes('booking')) {
             reply = `DRS Deals operates as a personalized concierge desk: 1) Explore our curated hotel memberships. 2) Call ${siteConfig.contacts.hotline1} or WhatsApp ${siteConfig.contacts.whatsappDisplay}. 3) Our concierge verifies dates and coordinates your membership directly with property management.`;
         } else if (q.includes('partner') || q.includes('hotel partner') || q.includes('list property')) {
             reply = `5-star hotels, luxury resorts, water parks, and fine dining venues can partner with DRS Deals with zero upfront cost. Email ${siteConfig.contacts.email} or submit your property on /partners.`;
